@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernández Latorre 1 - TerraNova Arquitectura</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body class="project-page">
+    <div class="home-logo">
+      <a href="cover.html">
+        <img
+          src="assets/imagenes/terranova2.png"
+          alt="Terranova Arquitectura"
+          class="home-brand-logo"
+        />
+      </a>
+    </div>
+
+    <nav class="home-nav">
+      <a href="index.html" class="nav-link">proyectos</a>
+      <a href="#estudio" class="nav-link">estudio</a>
+      <a href="#contacto" class="nav-link">contacto</a>
+    </nav>
+
+    <div class="horizontal-line"></div>
+
+    <div class="horizontal-line"></div>
+
+    <div class="projects-label">
+      <span class="projects-text">Fernández Latorre 1</span>
+    </div>
+
+    <div class="project-description">
+      <p class="project-text">
+        El reto en este proyecto era dar una nueva vida a un viejo local en el
+        que había una peluquería al que se le añadió una entreplanta, antigua
+        vivienda de los porteros de un edificio histórico espectacular en una
+        preciosa calle de La Coruña. Con la reforma buscamos que la luz llegara
+        a todos los rincones, así como adaptar la estructura de la propiedad a
+        su nuevo uso. Gracias a la cantidad y el tamaño de las ventanas y a una
+        altura de techos de 4mts., el resultado fue espectacular.
+      </p>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-image-large">
+        <img
+          src="assets/imagenes/fernandezlatorre1.2.jpg"
+          alt="Fernández Latorre 1"
+          class="project-image"
+        />
+      </div>
+      <div class="project-image-small">
+        <img
+          src="assets/imagenes/fernandezlatorre1.3.jpg"
+          alt="Fernández Latorre 1 - Interior"
+          class="project-image"
+        />
+      </div>
+    </div>
+  </body>
+  <script>
+    // Convertir scroll vertical en horizontal para elementos debajo de la línea
+    document.addEventListener("wheel", function (e) {
+      const lineHeight = window.innerHeight * 0.33 + 64; // 33vh + 4rem
+      if (e.clientY > lineHeight) {
+        e.preventDefault();
+        window.scrollBy(e.deltaY, 0);
+      }
+    });
+  </script>
+</html>
