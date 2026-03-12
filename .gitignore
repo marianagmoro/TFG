@@ -1,0 +1,11 @@
+# Imágenes
+assets/imagenes/**/*.jpg
+assets/imagenes/**/*.jpeg
+assets/imagenes/**/*.png
+assets/imagenes/**/*.gif
+assets/imagenes/**/*.webp
+assets/imagenes/**/*.svg
+
+# Ignorar carpetas de imágenes pero mantener estructura
+!assets/imagenes/
+!assets/imagenes/**/.gitkeep
