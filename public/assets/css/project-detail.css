@@ -1,0 +1,421 @@
+/* ==================== RESET MÍNIMO ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* ==================== BASE ==================== */
+
+:root {
+  --bg: #e5e4e4;
+  --text: #333333;
+  --line: rgba(0, 0, 0, 0.65);
+}
+
+body.project-page {
+  background: var(--bg);
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* ==================== HEADER ==================== */
+
+.home-logo {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2000;
+}
+
+.home-brand-logo {
+  max-width: 140px;
+  max-height: 55px;
+  height: auto;
+}
+
+.home-nav {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  display: flex;
+  gap: 2.6rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: #333;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.horizontal-line {
+  position: fixed;
+  top: 33vh;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: var(--line);
+  z-index: 1999;
+}
+
+/* ==================== LAYOUT ==================== */
+
+.project-main {
+  height: 100vh;
+  padding-top: calc(33vh + 3rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.project-shell {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  height: 100%;
+  min-height: 0;
+}
+
+.project-sidebar {
+  height: 100%;
+  min-height: 0;
+  padding-right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.project-gallery-area {
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+}
+
+.project-gallery-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  padding-bottom: 0.5rem;
+}
+
+.project-gallery-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-gallery-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-gallery-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(51, 51, 51, 0.25);
+}
+
+.project-gallery-horizontal {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+  min-width: max-content;
+}
+
+/* ==================== SIDEBAR ==================== */
+
+.back-to-projects {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.back-link {
+  color: #333;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #666;
+}
+
+.project-header {
+  margin-bottom: 0.9rem;
+  flex-shrink: 0;
+}
+
+.project-title {
+  font-family: "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.project-meta {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  font-family: "Arial", sans-serif;
+  color: #666;
+  font-size: 0.92rem;
+}
+
+.project-year,
+.project-location {
+  font-weight: 500;
+}
+
+.project-description-block {
+  margin-top: 0.3rem;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.project-description-title {
+  font-family: "Arial", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.55rem;
+}
+
+.project-text {
+  font-family: "Arial", sans-serif;
+  font-size: 0.89rem;
+  line-height: 1.55;
+  color: #555;
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+.project-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== GALERÍA ==================== */
+
+.project-gallery-item {
+  flex: 0 0 auto;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.35rem;
+}
+
+.project-gallery-item.is-main {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.project-gallery-image {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 78vw;
+  object-fit: contain;
+}
+
+.project-gallery-item.is-main .project-gallery-image {
+  max-width: 88vw;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1100px) {
+  .project-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .project-shell {
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-logo {
+    left: 1rem;
+  }
+
+  .home-nav {
+    right: 1rem;
+    gap: 1.5rem;
+  }
+
+  .horizontal-line {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.7rem;
+  }
+
+  .project-gallery-image {
+    max-width: 82vw;
+  }
+
+  .project-gallery-item.is-main .project-gallery-image {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  body.project-page {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .project-main {
+    height: auto;
+    min-height: 100vh;
+    padding-top: calc(33vh + 2rem);
+  }
+
+  .project-shell {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  .project-sidebar {
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .project-gallery-area {
+    height: 52vh;
+  }
+
+  .home-brand-logo {
+    max-width: 110px;
+  }
+
+  .home-nav {
+    top: 1.8rem;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+  }
+
+  .project-title {
+    font-size: 1.55rem;
+  }
+
+  .project-text {
+    font-size: 0.86rem;
+  }
+
+  .project-gallery-image {
+    max-width: 88vw;
+  }
+
+  .project-gallery-item.is-main .project-gallery-image {
+    max-width: 92vw;
+  }
+}
+
+/* ==================== LIGHTBOX ==================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 5000;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-image {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-arrow:hover {
+  opacity: 1;
+}
+
+.lightbox-arrow.left {
+  left: 3rem;
+}
+
+.lightbox-arrow.right {
+  right: 3rem;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

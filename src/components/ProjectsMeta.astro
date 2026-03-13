@@ -1,0 +1,10 @@
+---
+const { projects = [] } = Astro.props;
+
+const totalProjects = projects.length.toString().padStart(2, "0");
+---
+
+<div class="projects-counter">
+  <span class="projects-counter-number">{totalProjects}</span>
+  <span class="projects-counter-label">proyectos</span>
+</div>

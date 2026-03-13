@@ -1,0 +1,26 @@
+---
+const { project } = Astro.props;
+---
+
+<aside class="project-sidebar">
+  <div class="back-to-projects">
+    <a href="/proyectos" class="back-link">← Volver a proyectos</a>
+  </div>
+
+  <header class="project-header">
+    <h1 class="project-title">{project.title}</h1>
+
+    <div class="project-meta">
+      <span class="project-year">{project.year}</span>
+      <span class="project-location">{project.location}</span>
+    </div>
+  </header>
+
+  <div class="project-description-block">
+    <h2 class="project-description-title">{project.descriptionTitle}</h2>
+
+    {(project.description || []).map((paragraph) => (
+      <p class="project-text">{paragraph}</p>
+    ))}
+  </div>
+</aside>

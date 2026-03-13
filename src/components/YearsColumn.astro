@@ -1,0 +1,9 @@
+---
+const { years = [] } = Astro.props;
+---
+
+<div class="years-column">
+  {years.map((year) => (
+    <a href="#" class="year-link" data-year={year}>{year}</a>
+  ))}
+</div>

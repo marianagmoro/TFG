@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectHeader from '../../components/ProjectHeader.astro';
+import ProjectSidebar from '../../components/ProjectSidebar.astro';
+import ProjectHorizontalGallery from '../../components/ProjectHorizontalGallery.astro';
+import proyectos from '../../data/proyectos.json';
+
+export function getStaticPaths() {
+  return proyectos.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<BaseLayout title={`${project.title} - TerraNova Arquitectura`} bodyClass="project-page">
+  <link rel="stylesheet" href="/assets/css/project-detail.css" slot="head" />
+  <script src="/assets/js/lightbox.js" is:inline></script>
+
+  <ProjectHeader />
+
+  <main class="project-main">
+    <div class="project-shell">
+      <ProjectSidebar project={project} />
+      <ProjectHorizontalGallery project={project} />
+    </div>
+  </main>
+</BaseLayout>

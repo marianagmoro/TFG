@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectsHeader from '../components/ProjectsHeader.astro';
+import YearsColumn from '../components/YearsColumn.astro';
+import ProjectsGallery from '../components/ProjectsGallery.astro';
+import ProjectsMeta from '../components/ProjectsMeta.astro';
+import proyectos from '../data/proyectos.json';
+
+const projects = [...proyectos].sort((a, b) => b.year - a.year);
+
+const years = [...new Set(projects.map((project) => project.year))].sort(
+  (a, b) => b - a
+);
+---
+
+<BaseLayout title="TerraNova Arquitectura - Proyectos" bodyClass="home-page">
+  <link rel="stylesheet" href="/assets/css/projects.css" slot="head" />
+  <script is:inline src="/assets/js/projects.js"></script>
+
+  <ProjectsHeader />
+  <YearsColumn years={years} />
+  <ProjectsMeta projects={projects} />
+  <ProjectsGallery projects={projects} />
+</BaseLayout>

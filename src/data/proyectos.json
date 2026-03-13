@@ -1,0 +1,97 @@
+[
+  {
+    "slug": "avda-de-oza",
+    "title": "Avda. de Oza",
+    "year": 2021,
+    "location": "A Coruña",
+    "mainImage": "/assets/imagenes/avda-de-oza/avdaoza.jpg",
+    "mainImageAlt": "Avda. de Oza",
+    "descriptionTitle": "Descripción del Proyecto",
+    "description": [
+      "Edificio de oficinas que redefine la relación entre trabajo y bienestar urbano. El diseño incorpora amplios espacios verdes y terrazas que mejoran la calidad del ambiente laboral y contribuyen a la sostenibilidad del conjunto.",
+      "La fachada ventilada y los sistemas de captación de agua pluvial ejemplifican el compromiso del proyecto con la arquitectura bioclimática y la eficiencia energética."
+    ],
+    "specs": [
+      { "label": "Superficie", "value": "2.800 m²" },
+      { "label": "Tipo", "value": "Oficinas" },
+      { "label": "Estado", "value": "Finalizado" },
+      { "label": "Cliente", "value": "Empresa" }
+    ],
+    "gallery": [
+      {
+        "src": "/assets/imagenes/avda-de-oza/avdaoza.jpg",
+        "alt": "Avda. de Oza - imagen principal"
+      }
+    ]
+  },
+
+
+  {
+    "slug": "fernandez-la-torre",
+    "title": "Fernández La Torre",
+    "year": 2025,
+    "location": "A Coruña",
+    "mainImage": "/assets/imagenes/fernandez-la-torre/fernandezlatorre3.jpg",
+    "mainImageAlt": "Fernández La Torre",
+    "descriptionTitle": "Descripción del Proyecto",
+    "description": [
+      "Edificio de oficinas que redefine la relación entre trabajo y bienestar urbano. El diseño incorpora amplios espacios verdes y terrazas que mejoran la calidad del ambiente laboral y contribuyen a la sostenibilidad del conjunto.",
+      "La fachada ventilada y los sistemas de captación de agua pluvial ejemplifican el compromiso del proyecto con la arquitectura bioclimática y la eficiencia energética."
+    ],
+    "specs": [
+      { "label": "Superficie", "value": "2.800 m²" },
+      { "label": "Tipo", "value": "Oficinas" },
+      { "label": "Estado", "value": "Finalizado" },
+      { "label": "Cliente", "value": "Empresa" }
+    ],
+    "gallery": [
+      {
+        "src": "/assets/imagenes/fernandez-la-torre/fernandezlatorre3.jpg",
+        "alt": "Fernández La Torre - imagen principal"
+      },
+      {
+        "src": "/assets/imagenes/fernandez-la-torre/fernandezlatorre2.jpg",
+        "alt": "Fernández La Torre - vista 2"
+      },
+      {
+        "src": "/assets/imagenes/fernandez-la-torre/fernandezlatorre1.jpg",
+        "alt": "Fernández La Torre - vista 3"
+      }
+    ]
+  },
+
+  
+  {
+    "slug": "maestro-clave",
+    "title": "Maestro Clave",
+    "year": 2025,
+    "location": "A Coruña",
+    "mainImage": "/assets/imagenes/maestroclave/maestroclave1.jpg",
+    "mainImageAlt": "Maestro Clave",
+    "descriptionTitle": "Descripción del Proyecto",
+    "description": [
+      "Edificio de oficinas que redefine la relación entre trabajo y bienestar urbano. El diseño incorpora amplios espacios verdes y terrazas que mejoran la calidad del ambiente laboral y contribuyen a la sostenibilidad del conjunto.",
+      "La fachada ventilada y los sistemas de captación de agua pluvial ejemplifican el compromiso del proyecto con la arquitectura bioclimática y la eficiencia energética."
+    ],
+    "specs": [
+      { "label": "Superficie", "value": "2.800 m²" },
+      { "label": "Tipo", "value": "Oficinas" },
+      { "label": "Estado", "value": "Finalizado" },
+      { "label": "Cliente", "value": "Empresa" }
+    ],
+    "gallery": [
+      {
+        "src": "/assets/imagenes/maestro-clave/maestroclave1.jpg",
+        "alt": "Maestro Clave - imagen principal"
+      },
+      {
+        "src": "/assets/imagenes/maestro-clave/maestroclave2.jpg",
+        "alt": "Maestro Clave - vista 2"
+      },
+      {
+        "src": "/assets/imagenes/maestro-clave/maestroclave3.jpg",
+        "alt": "Maestro Clave - vista 3"
+      }
+    ]
+  }
+]

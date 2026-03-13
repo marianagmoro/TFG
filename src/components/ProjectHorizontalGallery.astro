@@ -1,0 +1,49 @@
+---
+const { project } = Astro.props;
+
+const images = [
+  {
+    src: project.mainImage,
+    alt: project.mainImageAlt
+  },
+  ...(project.gallery || [])
+];
+---
+
+<section class="project-gallery-area">
+  <div class="project-gallery-wrapper">
+    <div class="project-gallery-horizontal">
+
+      {images.map((image, index) => (
+        <figure class={`project-gallery-item ${index === 0 ? 'is-main' : ''}`}>
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="project-gallery-image"
+            data-index={index}
+            loading="lazy"
+          />
+        </figure>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+  <button class="lightbox-arrow left" id="lightbox-prev">
+    ‹
+  </button>
+
+  <img class="lightbox-image" id="lightbox-image" />
+
+  <button class="lightbox-arrow right" id="lightbox-next">
+    ›
+  </button>
+
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+
+</div>

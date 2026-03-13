@@ -1,0 +1,17 @@
+---
+const { project } = Astro.props;
+---
+
+<div class="gallery-item" data-year={project.year}>
+  <a href={`/proyectos/${project.slug}`} class="project-link">
+    <img
+      src={project.mainImage}
+      alt={project.mainImageAlt}
+      class="project-image"
+      loading="lazy"
+    />
+    <div class="project-overlay">
+      <span class="project-name">{project.title}</span>
+    </div>
+  </a>
+</div>
